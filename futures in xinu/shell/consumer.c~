@@ -1,0 +1,10 @@
+#include<prodcons.h>
+
+	void consumer(int count)
+	{
+
+		int i;
+		for(i=1; i<=count; i++)
+		fprintf("The consumed value is : %d \n",n);
+ 
+	}

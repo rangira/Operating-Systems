@@ -1,0 +1,17 @@
+
+#include<prodcons.h>
+
+
+syscall future_set(future *f,  int *value) {
+	if(f->state==1 || f->state==0)
+	{
+		f->value = (int*)getmem(sizeof(int));
+		*(f->value) = *value;
+		f->state=2;
+		
+
+		return OK;
+	}
+	return SYSERR;
+}
+
